@@ -365,7 +365,7 @@ def save_log(logs,guid,lambdaname,runner,lamb,message=None,headers=None):
     if elkversion <= 6:
         es.index("nyx_lambdalog", id = guid, doc_type = "doc", body = body)
     else:
-        es.index("nyx_lambdalog", id = guid, body=body)
+        es.index("nyx_lambdalog", id = guid, body = body)
 
     logger.info("Saved")
 
